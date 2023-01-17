@@ -1,5 +1,6 @@
-import { Title, Card, CardInside, CardButton, Button } from './style';
-import Form from './../Form';
+import { Title, Card, CardInside, CardButton, Button } from './styles';
+import Input from './../Input';
+import SelectForm from './../SelectForm'
 
 const CardForm = () => (
   <Card>
@@ -8,13 +9,14 @@ const CardForm = () => (
           Preencha os dados para criar o card do colaborador.
         </Title>
         <form>
-          <Form label="Nome" placeholder="Digite seu nome" />
-          <Form label="Cargo" placeholder="Digite seu cargo" />
-          <Form label="Imagem" placeholder="Adicione uma imagem" />
+          <Input label="Nome" placeholder="Digite seu nome" />
+          <Input label="Cargo" placeholder="Digite seu cargo" />
+          <Input label="Imagem" placeholder="Adicione uma imagem" />
+          <SelectForm />
           <CardButton>
             <Button>Criar card</Button>
           </CardButton>
-          
+
         </form>
       </CardInside>
   </Card>

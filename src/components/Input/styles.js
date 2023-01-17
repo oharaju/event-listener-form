@@ -10,7 +10,7 @@ export const Label = styled.label`
   text-align: left;
 `
 
-export const Input = styled.input`
+export const InputStyles = styled.input`
   border: none;
   border-radius: 5px;
   padding: 21px 10px;
