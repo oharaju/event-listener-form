@@ -17,16 +17,3 @@ export const Title = styled.h1`
   font-size: 22px;
   font-weight: 400;
 `
-export const CardButton = styled.div`
-  display: flex;
-`
-
-export const Button = styled.button`
-  background-color: #6278F7;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 22px;
-  outline: none;
-  cursor: pointer;
-`

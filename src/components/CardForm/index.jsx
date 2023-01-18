@@ -1,6 +1,8 @@
-import { Title, Card, CardInside, CardButton, Button } from './styles';
+import { Title, Card, CardInside } from './styles';
 import Input from './../Input';
 import SelectForm from './../SelectForm'
+import Button from '../Button'
+import ButtonCaio from '../ButtonDeconstruction'
 
 function CardForm() {
   const teams = [
@@ -12,6 +14,7 @@ function CardForm() {
     'Mobile',
     'Inovação e Gestão'
   ]
+
   return(
     <Card>
       <CardInside>
@@ -23,10 +26,9 @@ function CardForm() {
           <Input label="Cargo" placeholder="Digite seu cargo" />
           <Input label="Imagem" placeholder="Adicione uma imagem" />
           <SelectForm items={teams} label="Time" />
-          
-          <CardButton>
-            <Button>Criar card</Button>
-          </CardButton>
+          <Button type="submit">Criar Card</Button>
+
+          <ButtonCaio type="button" id="meubotao" className="classeNova" onClick={() => console.log('click')}>meu botao</ButtonCaio>
 
         </form>
       </CardInside>
