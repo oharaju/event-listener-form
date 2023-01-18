@@ -1,9 +1,16 @@
+import { Select, FormSelect, Label } from './styles';
+
 const SelectForm = (props) => {
+
   return(
-    <div>
-      <label>{props.label}</label>
-      <select></select>
-    </div>
+    <FormSelect>
+      <Label>{props.label}</Label>
+      <Select>
+        { props.items.map((item) => (
+          <option key={item}>{item}</option>
+        ))}
+      </Select>
+    </FormSelect>
   )
 }
 
