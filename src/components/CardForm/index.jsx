@@ -5,6 +5,12 @@ import Button from '../Button'
 import ButtonCaio from '../ButtonDeconstruction'
 
 function CardForm() {
+
+  function SaveForm(e) {
+    e.preventDefault();
+    console.log('olá')
+  }
+
   const teams = [
     '',
     'Programação',
@@ -21,16 +27,15 @@ function CardForm() {
         <Title>
           Preencha os dados para criar o card do colaborador.
         </Title>
-        <form>
-          <Input label="Nome" placeholder="Digite seu nome" />
-          <Input label="Cargo" placeholder="Digite seu cargo" />
-          <Input label="Imagem" placeholder="Adicione uma imagem" />
-          <SelectForm items={teams} label="Time" />
+        <form onSubmit={SaveForm}>
+          <Input label="Nome" placeholder="Digite seu nome" required={true} />
+          <Input label="Cargo" placeholder="Digite seu cargo" required={true} />
+          <Input label="Imagem" placeholder="Adicione uma imagem" required={true} />
+          <SelectForm items={teams} label="Time" required={true} />
           <Button type="submit">Criar Card</Button>
-
-          <ButtonCaio type="button" id="meubotao" className="classeNova" onClick={() => console.log('click')}>meu botao</ButtonCaio>
-
         </form>
+
+        {/* <ButtonCaio type="button" id="meubotao" className="classeNova" onClick={() => console.log('click')}>meu botao</ButtonCaio> */}
       </CardInside>
   </Card>
 )}

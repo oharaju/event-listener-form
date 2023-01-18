@@ -1,12 +1,10 @@
 import { FormCamp, Label, InputStyles } from './styles';
 
-const Input = (props) => {
+const Input = ({label, placeholder, required}) => {
   return(
     <FormCamp>
-      <Label>
-        {props.label}
-      </Label>
-      <InputStyles placeholder={props.placeholder} />
+      <Label>{label}</Label>
+      <InputStyles placeholder={placeholder} required={required} />
     </FormCamp>
   )
 }

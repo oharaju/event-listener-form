@@ -5,7 +5,7 @@ const SelectForm = (props) => {
   return(
     <FormSelect>
       <Label>{props.label}</Label>
-      <Select>
+      <Select required={props}>
         { props.items.map((item) => (
           <option key={item}>{item}</option>
         ))}
