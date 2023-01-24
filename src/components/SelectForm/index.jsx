@@ -1,12 +1,11 @@
 import { Select, FormSelect, Label } from './styles';
 
-const SelectForm = (props) => {
-
+const SelectForm = ({label, value, items, onChange, ...props}) => {
   return(
     <FormSelect>
-      <Label>{props.label}</Label>
-      <Select required={props}>
-        { props.items.map((item) => (
+      <Label>{label}</Label>
+      <Select onChange={event => onChange(event.target.value)} required={props} value={value} {...props}>
+        { items.map((item) => (
           <option key={item}>{item}</option>
         ))}
       </Select>

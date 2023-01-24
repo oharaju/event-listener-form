@@ -2,14 +2,10 @@ import { Title, Card, CardInside } from './styles';
 import Input from './../Input';
 import SelectForm from './../SelectForm'
 import Button from '../Button'
-import ButtonCaio from '../ButtonDeconstruction'
+import ButtonProps from '../ButtonDeconstruction'
+import { useState } from 'react';
 
 function CardForm() {
-
-  function SaveForm(e) {
-    e.preventDefault();
-    console.log('olá')
-  }
 
   const teams = [
     '',
@@ -21,21 +17,55 @@ function CardForm() {
     'Inovação e Gestão'
   ]
 
+  const [nome, setNome] = useState('');
+  const [cargo, setCargo] = useState('');
+  const [imagem, setImagem] = useState('');
+  const [time, setTime] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(nome, cargo, imagem, time)
+  }
+
   return(
     <Card>
       <CardInside>
         <Title>
           Preencha os dados para criar o card do colaborador.
         </Title>
-        <form onSubmit={SaveForm}>
-          <Input label="Nome" placeholder="Digite seu nome" required={true} />
-          <Input label="Cargo" placeholder="Digite seu cargo" required={true} />
-          <Input label="Imagem" placeholder="Adicione uma imagem" required={true} />
-          <SelectForm items={teams} label="Time" required={true} />
+        <form onSubmit={handleSubmit}>
+          <Input 
+            label="Nome" 
+            placeholder="Digite seu nome" 
+            required={true}
+            value={nome}
+            onChange={setNome}
+          />
+          <Input 
+            label="Cargo" 
+            placeholder="Digite seu cargo" 
+            required={true}
+            value={cargo}
+            onChange={setCargo}
+          />
+          <Input 
+            label="Imagem" 
+            placeholder="Digite o endereço da imagem"
+            value={imagem}
+            onChange={setImagem}
+          />
+          <SelectForm
+            className="julia"
+            items={teams} 
+            label="Time" 
+            required={true}
+            value={time}
+            onChange={setTime}
+          />
           <Button type="submit">Criar Card</Button>
         </form>
 
-        {/* <ButtonCaio type="button" id="meubotao" className="classeNova" onClick={() => console.log('click')}>meu botao</ButtonCaio> */}
+        {/* <ButtonProps type="button" id="meubotao" className="classeNova" onClick={() => console.log('click')}>meu botao</ButtonProps> */}
       </CardInside>
   </Card>
 )}

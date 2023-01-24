@@ -1,6 +1,7 @@
 import { CardButton, ButtonStyles } from './styles';
 
-const ButtonCaio = ({children, type, ...props}) => {
+const ButtonProps = ({children, type, ...props}) => {
+
   return(
     <CardButton>
       <ButtonStyles type={type} {...props}>{children}</ButtonStyles>
@@ -8,4 +9,4 @@ const ButtonCaio = ({children, type, ...props}) => {
   )
 }
 
-export default ButtonCaio;
+export default ButtonProps;

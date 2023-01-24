@@ -1,10 +1,10 @@
 import { FormCamp, Label, InputStyles } from './styles';
 
-const Input = ({label, placeholder, required}) => {
+const Input = ({label, placeholder, required, value, onChange, ...props}) => {
   return(
     <FormCamp>
       <Label>{label}</Label>
-      <InputStyles placeholder={placeholder} required={required} />
+      <InputStyles value={value} onChange={event => onChange(event.target.value)} placeholder={placeholder} required={required} {...props}  />
     </FormCamp>
   )
 }
