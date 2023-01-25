@@ -5,7 +5,7 @@ import Button from '../Button'
 import ButtonProps from '../ButtonDeconstruction'
 import { useState } from 'react';
 
-function CardForm() {
+function CardForm(props) {
 
   const teams = [
     '',
@@ -24,7 +24,12 @@ function CardForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(nome, cargo, imagem, time)
+    props.colaboradorCadastrado({
+      nome,
+      cargo,
+      imagem,
+      time
+    })
   }
 
   return(
