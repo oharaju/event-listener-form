@@ -12,6 +12,7 @@ function Form(props) {
     'Programação',
     'Front-End',
     'Data Science',
+    'Devops',
     'UX e Design',
     'Mobile',
     'Inovação e Gestão'

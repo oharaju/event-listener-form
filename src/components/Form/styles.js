@@ -9,6 +9,7 @@ export const CardInside = styled.div`
   padding: 20px 50px;
   box-shadow: 7px 7px 15px rgb(0 0 0 / 8%);
   border-radius: 20px;
+  margin-bottom: 60px;
 `
 export const Title = styled.h1`
   color: #212121;
