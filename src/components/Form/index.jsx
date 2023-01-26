@@ -1,11 +1,11 @@
 import { Title, Card, CardInside } from './styles';
-import Input from './../Input';
-import SelectForm from './../SelectForm'
+import Input from '../Input';
+import SelectForm from '../SelectForm'
 import Button from '../Button'
 import ButtonProps from '../ButtonDeconstruction'
 import { useState } from 'react';
 
-function CardForm(props) {
+function Form(props) {
 
   const teams = [
     '',
@@ -75,4 +75,4 @@ function CardForm(props) {
   </Card>
 )}
 
-export default CardForm;
+export default Form;

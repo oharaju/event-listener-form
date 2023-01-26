@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import CardForm from './components/CardForm'
+import Form from './components/Form'
 
 function App() {
 
@@ -13,7 +13,7 @@ const submeterColaborador = (colaborador) => {
 
   return (
     <div className="App">
-      <CardForm colaboradorCadastrado={colaborador => submeterColaborador(colaborador)}  />
+      <Form colaboradorCadastrado={colaborador => submeterColaborador(colaborador)}  />
     </div>
   );
 }
