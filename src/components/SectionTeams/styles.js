@@ -9,4 +9,6 @@ export const Time = styled.h3`
   font-size: 24px;
   text-align: center;
   font-weight: 500;
+  border-bottom: 4px solid;
+  display: inline-block;
 `
