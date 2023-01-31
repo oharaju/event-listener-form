@@ -51,8 +51,8 @@ const SectionTeams = (props) => {
     <div>
 
       {teams.map(team => (
-        <Section style={{backgroundColor: team.colorPrimary}}>
-          <Time key={team.nome}>{team.nome}</Time>
+        <Section key={team.nome} style={{backgroundColor: team.colorPrimary}}>
+          <Time>{team.nome}</Time>
           <CardPeople />
         </Section>
       ))}

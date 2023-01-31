@@ -1,12 +1,17 @@
-const CardPeople = (props) => {
+import { CardPeoples, Card, ImageWrapper, Image } from './styles';
 
+const CardPeople = () => {
   return (
-    <div>
-      <img src='https://i.pravatar.cc/300' />
-      <p>Juliana Ohara</p>
-      <p>Desenvolvedora de software e instrutora</p>
-    </div>
+    <CardPeoples>
+      <Card>
+        <ImageWrapper>
+          <Image src='https://i.pravatar.cc/300' />
+        </ImageWrapper>
+        <p>Juliana Ohara</p>
+        <p>Desenvolvedora de software e instrutora</p>
+      </Card>
+    </CardPeoples>
   )
 }
 
-export default CardPeople
+export default CardPeople;
