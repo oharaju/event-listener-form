@@ -8,7 +8,6 @@ import { useState } from 'react';
 function Form(props) {
 
   const teams = [
-    '',
     'Programação',
     'Front-End',
     'Data Science',

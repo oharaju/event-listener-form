@@ -1,14 +1,14 @@
 import { CardPeoples, Card, ImageWrapper, Image } from './styles';
 
-const CardPeople = () => {
+const CardPeople = ({ imagem, nome, cargo }) => {
   return (
     <CardPeoples>
       <Card>
         <ImageWrapper>
-          <Image src='https://i.pravatar.cc/300' />
+          <Image src='https://github.com/oharaju.png' alt={nome} />
         </ImageWrapper>
-        <p>Juliana Ohara</p>
-        <p>Desenvolvedora de software e instrutora</p>
+        <p>{nome}</p>
+        <p>{cargo}</p>
       </Card>
     </CardPeoples>
   )

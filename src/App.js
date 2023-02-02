@@ -5,17 +5,19 @@ import SectionTeams from './components/SectionTeams'
 
 function App() {
 
-const [colaboradores, setColaboradores] = useState([]);
+  const [colaboradores, setColaboradores] = useState([]);
 
-const submeterColaborador = (colaborador) => {
-  setColaboradores([... colaboradores, colaborador])
-  console.log(colaborador)
-}
+  const submeterColaborador = (colaborador) => {
+    setColaboradores([... colaboradores, colaborador])
+    console.log(colaborador)
+  }
 
   return (
     <div className="App">
-      <Form colaboradorCadastrado={colaborador => submeterColaborador(colaborador)}  />
-      <SectionTeams/>
+      <Form colaboradorCadastrado={colaborador => submeterColaborador
+      (colaborador)} />
+
+      <SectionTeams colaboradores={colaboradores}/>
     </div>
   );
 }

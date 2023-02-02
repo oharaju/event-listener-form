@@ -1,7 +1,7 @@
 import { Time, Section } from './styles';
 import CardPeople from '../CardPeople';
 
-const SectionTeams = () => {
+const SectionTeams = (props) => {
 
   const teams = [
     {
@@ -52,7 +52,10 @@ const SectionTeams = () => {
       {teams.map(team => (
         <Section key={team.nome} style={{backgroundColor: team.colorPrimary}}>
           <Time style={{borderColor: team.colorSecondary}}>{team.nome}</Time>
-          <CardPeople />
+
+          {props.colaboradores.map((props => 
+          <CardPeople key={props} nome={props.nome} cargo={props.cargo} />))}
+
         </Section>
       ))}
     </div>
