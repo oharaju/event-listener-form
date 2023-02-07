@@ -1,61 +1,70 @@
-import { Time, Section } from './styles';
+import { Section, TimeTitle, Cards } from './styles';
 import CardPeople from '../CardPeople';
 
 const SectionTeams = (props) => {
 
   const teams = [
     {
-      nome: 'Programação',
+      nameTeam: 'Programação',
       colorPrimary: '#D9F7E9',
-      colorSecondary: '#57C278', 
+      colorSecondary: '#57C278',
+      id: '1'
     },
 
     {
-      nome: 'Front-End',
+      nameTeam: 'Front-End',
       colorPrimary: '#E8FFFF',
-      colorSecondary: '#82CFFA', 
+      colorSecondary: '#82CFFA',
+      id: '2'
     },
 
     {
-      nome: 'Data Science',
+      nameTeam: 'Data Science',
       colorPrimary: '#E9FFE3',
-      colorSecondary: '#A6D157', 
+      colorSecondary: '#A6D157',
+      id: '3' 
     },
 
     {
-      nome: 'Devops',
+      nameTeam: 'Devops',
       colorPrimary: '#FDE7E8',
-      colorSecondary: '#E06B69', 
+      colorSecondary: '#E06B69',
+      id: '4' 
     },
 
     {
-      nome: 'UX e Design',
+      nameTeam: 'UX e Design',
       colorPrimary: '#FAE9F5',
-      colorSecondary: '#DB6EBF', 
+      colorSecondary: '#DB6EBF',
+      id: '5'
     },
 
     {
-      nome: 'Mobile',
+      nameTeam: 'Mobile',
       colorPrimary: '#FFF5DA',
-      colorSecondary: '#FFBA05', 
+      colorSecondary: '#FFBA05',
+      id: '6'
     },
 
     {
-      nome: 'Inovação e Gestão',
+      nameTeam: 'Inovação e Gestão',
       colorPrimary: '#FFEEDF',
-      colorSecondary: '#FF8A29', 
+      colorSecondary: '#FF8A29',
+      id: '7' 
     },
   ]
 
   return (
     <div>
       {teams.map(team => (
-        <Section key={team.nome} style={{backgroundColor: team.colorPrimary}}>
-          <Time style={{borderColor: team.colorSecondary}}>{team.nome}</Time>
+        <Section key={team.id} style={{backgroundColor: team.colorPrimary}}>
+          <TimeTitle style={{borderColor: team.colorSecondary}}>{team.nameTeam}</TimeTitle>
 
-          {props.colaboradores.map((props => 
-          <CardPeople key={props} nome={props.nome} cargo={props.cargo} />))}
-
+          <Cards>
+            {props.colaboradores.map((props =>
+              <CardPeople key={props.nome} nome={props.nome} cargo={props.cargo} imagem={props.imagem} />
+            ))}
+          </Cards>
         </Section>
       ))}
     </div>
