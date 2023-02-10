@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function Form(props) {
 
-  const teams = [
+  const times = [
     'Programação',
     'Front-End',
     'Data Science',
@@ -17,18 +17,18 @@ function Form(props) {
     'Inovação e Gestão'
   ]
 
-  const [nome, setNome] = useState('');
-  const [cargo, setCargo] = useState('');
-  const [imagem, setImagem] = useState('');
-  const [time, setTime] = useState('');
+  const [name, setName] = useState('');
+  const [office, setOffice] = useState('');
+  const [image, setImage] = useState('');
+  const [team, setTeam] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
     props.colaboradorCadastrado({
-      nome,
-      cargo,
-      imagem,
-      time
+      name,
+      office,
+      image,
+      team
     })
   }
 
@@ -43,28 +43,28 @@ function Form(props) {
             label="Nome" 
             placeholder="Digite seu nome" 
             required={true}
-            value={nome}
-            onChange={setNome}
+            value={name}
+            onChange={setName}
           />
           <Input 
             label="Cargo" 
             placeholder="Digite seu cargo" 
             required={true}
-            value={cargo}
-            onChange={setCargo}
+            value={office}
+            onChange={setOffice}
           />
           <Input 
             label="Imagem" 
             placeholder="Digite o endereço da imagem"
-            value={imagem}
-            onChange={setImagem}
+            value={image}
+            onChange={setImage}
           />
           <SelectForm
-            items={teams} 
+            items={times} 
             label="Time" 
             required={true}
-            value={time}
-            onChange={setTime}
+            value={team}
+            onChange={setTeam}
           />
           <Button type="submit">Criar Card</Button>
         </form>

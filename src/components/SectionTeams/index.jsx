@@ -61,8 +61,8 @@ const SectionTeams = (props) => {
           <TimeTitle style={{borderColor: team.colorSecondary}}>{team.nameTeam}</TimeTitle>
           <Cards>
             {props.colaboradores.map((colaborador) => {
-              if(colaborador.time === team.nameTeam) {
-                return <CardPeople key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} />;
+              if(colaborador.team === team.nameTeam) {
+                return <CardPeople key={colaborador.name} name={colaborador.name} office={colaborador.office} image={colaborador.image} />;
               }
             })}
           </Cards>
