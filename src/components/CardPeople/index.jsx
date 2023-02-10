@@ -5,7 +5,7 @@ const CardPeople = ({ nome, cargo, imagem }) => {
     <CardPeoples>
       <Card>
         <ImageWrapper>
-          <Image src={imagem} alt={nome}  />
+          <Image src={imagem} alt={nome} />
         </ImageWrapper>
         <p>{nome}</p>
         <p>{cargo}</p>

@@ -60,7 +60,6 @@ function Form(props) {
             onChange={setImagem}
           />
           <SelectForm
-            className="julia"
             items={teams} 
             label="Time" 
             required={true}

@@ -9,7 +9,6 @@ function App() {
 
   const submeterColaborador = (colaborador) => {
     setColaboradores([... colaboradores, colaborador])
-    console.log(colaborador)
   }
 
   return (
@@ -17,7 +16,7 @@ function App() {
       <Form colaboradorCadastrado={colaborador => submeterColaborador
       (colaborador)} />
 
-      <SectionTeams colaboradores={colaboradores}/>
+      <SectionTeams colaboradores={colaboradores} />
     </div>
   );
 }

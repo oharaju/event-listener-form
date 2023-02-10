@@ -59,11 +59,12 @@ const SectionTeams = (props) => {
       {teams.map(team => (
         <Section key={team.id} style={{backgroundColor: team.colorPrimary}}>
           <TimeTitle style={{borderColor: team.colorSecondary}}>{team.nameTeam}</TimeTitle>
-
           <Cards>
-            {props.colaboradores.map((props =>
-              <CardPeople key={props.nome} nome={props.nome} cargo={props.cargo} imagem={props.imagem} />
-            ))}
+            {props.colaboradores.map((colaborador) => {
+              if(colaborador.time === team.nameTeam) {
+                return <CardPeople key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} />;
+              }
+            })}
           </Cards>
         </Section>
       ))}
