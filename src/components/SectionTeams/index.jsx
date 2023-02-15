@@ -53,21 +53,25 @@ const SectionTeams = (props) => {
       id: '7' 
     },
   ]
-
+  
   return (
     <div>
-      {teams.map(team => (
-        <Section key={team.id} style={{backgroundColor: team.colorPrimary}}>
-          <TimeTitle style={{borderColor: team.colorSecondary}}>{team.nameTeam}</TimeTitle>
-          <Cards>
-            {props.colaboradores.map((colaborador) => {
-              if(colaborador.team === team.nameTeam) {
-                return <CardPeople key={colaborador.name} name={colaborador.name} office={colaborador.office} image={colaborador.image} />;
-              }
-            })}
-          </Cards>
-        </Section>
-      ))}
+      {props.colaboradores.length > 0 &&
+        <>
+          {teams.map(team => (
+            <Section key={team.id} style={{backgroundColor: team.colorPrimary}}>
+              <TimeTitle style={{borderColor: team.colorSecondary}}>{team.nameTeam}</TimeTitle>
+              <Cards>
+                {props.colaboradores.map((colaborador) => {
+                  if(colaborador.team === team.nameTeam) {
+                    return <CardPeople key={colaborador.name} name={colaborador.name} office={colaborador.office} image={colaborador.image} />;
+                  }
+                })}
+              </Cards>
+            </Section>
+          ))}
+        </>
+      }
     </div>
   )
 }
