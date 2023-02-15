@@ -29,7 +29,11 @@ function Form(props) {
       office,
       image,
       team
-    })
+    });
+    setName("");
+    setOffice("");
+    setImage("");
+    setTeam("");
   }
 
   return(
