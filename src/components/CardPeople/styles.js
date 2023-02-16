@@ -9,28 +9,18 @@ export const CardPeoples = styled.div`
 export const Card = styled.div`
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0 0 40px;
   width: 382px;
   overflow: hidden;
 `
 
 export const ImageWrapper = styled.div`
   position: relative;
-
-  &:before {
-    content: "";
-    background-color: #1d1db1;
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    bottom: 50%;
-    transform: translateX(-25%);
-  }
+  background-color: ${props => props.background};
 `;
 
 export const Image = styled.img`
   width: 120px;
   border-radius: 50%;
-  position: relative;
+  padding: 20px;
 `

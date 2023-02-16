@@ -53,13 +53,11 @@ const SectionTeams = (props) => {
       id: '7' 
     },
   ]
-  
+
   const listaColaboradores = props.colaboradores.map((colaborador) => {
     return colaborador.team
   })
   
-  console.log(listaColaboradores)
-
   return (
     <div>
       {props.colaboradores.length > 0 &&
@@ -67,12 +65,12 @@ const SectionTeams = (props) => {
           {teams.map((team) => {
             if(listaColaboradores.includes(team.nameTeam)) {
               return (
-                <Section key={team.id} style={{backgroundColor: team.colorPrimary}}>
-                  <TimeTitle style={{borderColor: team.colorSecondary}}>{team.nameTeam}</TimeTitle>
+                <Section key={team.id} backgroundSection={team.colorPrimary}>
+                  <TimeTitle borderTitle={team.colorSecondary}>{team.nameTeam}</TimeTitle>
                   <Cards>
                     {props.colaboradores.map((colaborador) => {
                       if(colaborador.team === team.nameTeam) {
-                        return <CardPeople key={colaborador.name} name={colaborador.name} office={colaborador.office} image={colaborador.image} />;
+                        return <CardPeople key={colaborador.name} name={colaborador.name} office={colaborador.office} image={colaborador.image} colorBackground={team.colorSecondary} />;
                       }
                     })}
                   </Cards>

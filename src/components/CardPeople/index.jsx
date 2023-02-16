@@ -1,10 +1,10 @@
 import { CardPeoples, Card, ImageWrapper, Image } from './styles';
 
-const CardPeople = ({ name, office, image }) => {
+const CardPeople = ({ name, office, image, colorBackground }) => {
   return (
     <CardPeoples>
       <Card>
-        <ImageWrapper>
+        <ImageWrapper background={colorBackground}>
           <Image src={image} alt={name} />
         </ImageWrapper>
         <p>{name}</p>
