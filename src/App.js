@@ -15,9 +15,7 @@ function App() {
     <div className="App">
       <Form colaboradorCadastrado={colaborador => submeterColaborador
       (colaborador)} />
-      
-        <SectionTeams colaboradores={colaboradores} />
-      
+      <SectionTeams colaboradores={colaboradores} />
     </div>
   );
 }

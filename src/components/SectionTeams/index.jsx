@@ -53,8 +53,7 @@ const SectionTeams = (props) => {
       id: '7' 
     },
   ]
-
-
+  
   const listaColaboradores = props.colaboradores.map((colaborador) => {
     return colaborador.team
   })
