@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Form from './components/Form'
 import SectionTeams from './components/SectionTeams'
+import Footer from './components/Footer';
 
 function App() {
 
@@ -12,11 +13,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Form colaboradorCadastrado={colaborador => submeterColaborador
-      (colaborador)} />
-      <SectionTeams colaboradores={colaboradores} />
-    </div>
+    <>
+      <div className="App">
+        <Form colaboradorCadastrado={colaborador => submeterColaborador(colaborador)} />
+        <SectionTeams colaboradores={colaboradores} />
+      </div>
+      <Footer />
+    </>
   );
 }
 
