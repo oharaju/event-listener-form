@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/organograma/static/css/main.18754a9b.css",
+    "main.js": "/organograma/static/js/main.4e7d4e6d.js",
+    "static/js/787.a2c090da.chunk.js": "/organograma/static/js/787.a2c090da.chunk.js",
+    "index.html": "/organograma/index.html",
+    "main.18754a9b.css.map": "/organograma/static/css/main.18754a9b.css.map",
+    "main.4e7d4e6d.js.map": "/organograma/static/js/main.4e7d4e6d.js.map",
+    "787.a2c090da.chunk.js.map": "/organograma/static/js/787.a2c090da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18754a9b.css",
+    "static/js/main.4e7d4e6d.js"
+  ]
+}
