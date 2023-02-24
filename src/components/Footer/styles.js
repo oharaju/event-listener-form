@@ -13,7 +13,6 @@ export const FooterContainer = styled.div`
   gap: 80px;
     
   @media ${device.tablet} {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
